@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginDialog</class>
+ <widget class="QDialog" name="LoginDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>360</width>
+    <height>281</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>361</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#widget
+{
+	border-image: url(:/loginDlg.png);
+	border:none;
+	background-color:transparent;
+}
+QPushButton
+{
+	border-image: url(:/PushButton.png);
+	color: rgb(150, 150, 150);
+	font: 75 12pt &quot;微软雅黑&quot;;
+}
+QPushButton:hover
+{
+	border-image: url(:/PushButtonHover.png);
+	color: rgb(255, 255, 255);
+}
+QPushButton:pressed
+{
+	border-image: url(:/PushButtonPressed.png);
+	color: rgb(255, 255, 255);
+}
+QCheckBox
+{
+	color: rgb(150, 150, 150);
+}
+QCheckBox:hover
+{
+	color: rgb(255, 255, 255);
+}
+QComboBox
+{
+	color: rgb(150, 150, 150);
+}
+QComboBox:hover
+{
+	color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <widget class="QWidget" name="widgetMiddle" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>100</y>
+      <width>351</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <widget class="QComboBox" name="comboBoxName">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>10</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditPasswd">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>50</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:-1px groove gray;
+border-radius:5px;
+</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxState">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>90</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>在线</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>忙碌</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>离开</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>隐身</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QCheckBox" name="checkBoxRemember">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>85</y>
+       <width>83</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>记住密码</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBoxAutoLogin">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>85</y>
+       <width>84</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-color: transparent;</string>
+     </property>
+     <property name="text">
+      <string>自动登录</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonRegister">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>10</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: none;
+border:none;
+background-color:transparent;</string>
+     </property>
+     <property name="text">
+      <string>注 册</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonFind">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>50</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: none;
+border:none;
+background-color:transparent;</string>
+     </property>
+     <property name="text">
+      <string>找 回</string>
+     </property>
+    </widget>
+    <widget class="ImageLabel" name="imageLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>8</y>
+       <width>91</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/*
+border:-1px groove gray;
+border-radius:8px;
+
+*/
+background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>        头像</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widgetButtom" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>220</y>
+      <width>351</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <widget class="QPushButton" name="pushButtonConfigure">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>10</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>设  置</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonLogin">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>10</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>登  录</string>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonClose">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>10</y>
+       <width>31</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/CloseButton.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/CloseButtonHover.png);
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widgetTop" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>351</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <widget class="QWidget" name="widgetCaption" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>351</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ImageLabel</class>
+   <extends>QLabel</extends>
+   <header>ImageLabel.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

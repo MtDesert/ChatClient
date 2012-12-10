@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TransferFileRemindForm</class>
+ <widget class="QWidget" name="TransferFileRemindForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>201</width>
+    <height>120</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>201</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <widget class="QWidget" name="widgetTop" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#widgetTop
+{
+	border-image: url(:/TranferFileRemind_title.png);
+}</string>
+    </property>
+    <widget class="QLabel" name="labelHeadImage">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>6</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(102, 102, 255);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelNickName_ID">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>6</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>枭非鸟(517549554)</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonClose">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>6</y>
+       <width>20</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/close.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/closeHover.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widgetButton" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>30</y>
+      <width>201</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgba(0, 0, 0, 0);
+	
+	border:none;
+}
+QWidget
+{
+	
+	background-color: rgb(255, 255, 255);
+}</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>7</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>向您发送文件</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelFileName">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>36</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>xx.xx</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonAccept">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>67</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>接收</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonSaveAs">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>67</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>另存为</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonRefuse">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>67</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>拒绝</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelIcon">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

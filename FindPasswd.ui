@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FindPasswd</class>
+ <widget class="QDialog" name="FindPasswd">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>363</width>
+    <height>521</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FindPasswd</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog
+{
+background-color: rgb(255, 255, 255);
+}
+QPushButton
+{
+color: rgba(105, 215, 2, 229);
+	
+font-size:20px;
+font-weight:400;
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="widgetFindPasswd_top" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>361</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>334</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayoutFindPasswd">
+     <property name="spacing">
+      <number>12</number>
+     </property>
+     <property name="rightMargin">
+      <number>9</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="labelUserName">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>帐   号</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEditUserName">
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonFind">
+       <property name="minimumSize">
+        <size>
+         <width>40</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>40</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+	background-color: rgba(105, 215, 2, 229);
+	color: rgb(255, 255, 255);
+	font: 17px &quot;微软雅黑&quot;;
+	font-weight:600;
+}</string>
+       </property>
+       <property name="text">
+        <string>查找</string>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>351</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="labelFindPasswdTitle">
+       <property name="styleSheet">
+        <string notr="true">QLabel
+{
+	color: rgba(105, 215, 2, 229);
+	
+font-size:22px;
+font-weight:400;
+}
+</string>
+       </property>
+       <property name="text">
+        <string> 找回密码</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacerFindPasswd">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>258</width>
+         <height>18</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonMinimun">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:none;</string>
+       </property>
+       <property name="text">
+        <string>一</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonClose">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:none;</string>
+       </property>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="labelUserNameWaiming">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>100</y>
+      <width>281</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="widgetFindPasswd_middle" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>130</y>
+     <width>361</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <widget class="QGroupBox" name="groupBoxQuestion">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>0</y>
+      <width>351</width>
+      <height>238</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>回答下面问题:</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelQuestion1">
+       <property name="text">
+        <string>问题一:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEditQuestion1"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineEditAnswer1"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="labelQuestion2">
+       <property name="text">
+        <string>问题二:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="lineEditQuestion2"/>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="lineEditAnswer2"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="labelQuestion3">
+       <property name="text">
+        <string>问题三:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="lineEditQuestion3"/>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="lineEditAnswer3"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButtonFindPasswd">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>250</y>
+      <width>80</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>80</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>80</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgba(105, 215, 2, 229);
+	color: rgb(255, 255, 255);
+	font: 17px &quot;微软雅黑&quot;;
+	font-weight:600;
+}</string>
+    </property>
+    <property name="text">
+     <string>找回密码</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFindPasswdTell_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>250</y>
+      <width>261</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgba(105, 215, 2, 229);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="widgetFindPasswd_Button" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>410</y>
+     <width>361</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <widget class="QLineEdit" name="lineEditPasswd">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>10</y>
+      <width>221</width>
+      <height>28</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPasswd">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>9</y>
+      <width>60</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>60</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>60</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>密  码</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelConfigPasswd">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>45</y>
+      <width>65</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>确认密码</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditConfigPasswd">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>45</y>
+      <width>221</width>
+      <height>28</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonConfigPasswd">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>80</y>
+      <width>50</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>50</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>50</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgba(105, 215, 2, 229);
+	color: rgb(255, 255, 255);
+	font: 17px &quot;微软雅黑&quot;;
+	font-weight:600;
+}</string>
+    </property>
+    <property name="text">
+     <string>确认</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSetPasswdWarming">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>79</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgba(105, 215, 2, 229);</string>
+    </property>
+    <property name="text">
+     <string>二次输入密码不一致</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

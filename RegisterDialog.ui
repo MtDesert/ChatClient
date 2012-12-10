@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RegisterDialog</class>
+ <widget class="QDialog" name="RegisterDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>331</width>
+    <height>430</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>331</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QWidget" name="widgetTop" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>331</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/personalInfor_titleBar.png);
+border:none;
+background-color:transparent;
+</string>
+    </property>
+    <widget class="QPushButton" name="pushButtonMaxSize">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>5</y>
+       <width>20</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/max.png);
+}
+QPushButton:hover
+{
+	border-image:url(:/maxhover.png)
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonClose">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>5</y>
+       <width>20</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/close.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/closeHover.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonMinSize">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>5</y>
+       <width>20</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/min.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/minHover.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widgetMiddle" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>30</y>
+      <width>331</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <widget class="QPushButton" name="pushButtonPasswdProcect">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>360</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/PushButton.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/PushButtonHover.png);
+}
+QPushButton:pressed
+{
+	border-image: url(:/PushButtonPressed.png);
+}</string>
+     </property>
+     <property name="text">
+      <string>更多信息</string>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelName">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>19</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>账       户:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelPasswd">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>73</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>密       码:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelTip">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>320</y>
+       <width>271</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(105, 215, 2);
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditPasswd">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>80</y>
+       <width>201</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelUserRemined">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>50</y>
+       <width>201</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(105, 215, 2);
+
+</string>
+     </property>
+     <property name="text">
+      <string>账户若不填写系统将会自动生成</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>250</y>
+       <width>161</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>性       别:</string>
+     </property>
+     <widget class="QRadioButton" name="radioMan">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>男</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioWomem">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>20</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>女</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLineEdit" name="lineEditPasswdConfirm">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>140</y>
+       <width>201</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelPasswdConfirm">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>140</y>
+       <width>68</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>确认密码:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditName">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>19</y>
+       <width>201</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonSetDate">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>220</y>
+       <width>91</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/birthday.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/birthdayHover.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelPasswdComplex">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>171</y>
+       <width>211</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(105, 215, 2);
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelPasswdError">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>110</y>
+       <width>171</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(105, 215, 2);
+</string>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonRegister">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>360</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/PushButton.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/PushButtonHover.png);
+}
+QPushButton:pressed
+{
+	border-image: url(:/PushButtonPressed.png);
+}</string>
+     </property>
+     <property name="text">
+      <string>注    册</string>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelDate">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>220</y>
+       <width>151</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>lineEditName</tabstop>
+  <tabstop>lineEditPasswd</tabstop>
+  <tabstop>lineEditPasswdConfirm</tabstop>
+  <tabstop>pushButtonSetDate</tabstop>
+  <tabstop>radioMan</tabstop>
+  <tabstop>radioWomem</tabstop>
+  <tabstop>pushButtonPasswdProcect</tabstop>
+  <tabstop>pushButtonRegister</tabstop>
+  <tabstop>pushButtonMaxSize</tabstop>
+  <tabstop>pushButtonMinSize</tabstop>
+  <tabstop>pushButtonClose</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

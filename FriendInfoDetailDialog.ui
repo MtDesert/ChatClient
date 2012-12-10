@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FriendInfoDetailDialog</class>
+ <widget class="QDialog" name="FriendInfoDetailDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>421</width>
+    <height>471</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="widgetTop" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>421</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/personalInfor_titleBar.png);
+border:none;
+background-color:transparent;</string>
+   </property>
+   <widget class="QPushButton" name="pushButtonMinSize">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>5</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	border-image: url(:/min.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/minHover.png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonMaxSize">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>5</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	border-image: url(:/max.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/maxhover.png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonClose">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>5</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	border-image: url(:/close.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/closeHover.png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="widgetMiddle" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>30</y>
+     <width>421</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="labelHeadImage">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>101</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(147, 172, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelNickName">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>20</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;微软雅黑&quot;;</string>
+    </property>
+    <property name="text">
+     <string>枭非鸟</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelId">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>20</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(120, 120, 120);</string>
+    </property>
+    <property name="text">
+     <string>517549554</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMark">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>50</y>
+      <width>61</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>添加备注</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>40</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	border-image: url(:/changeMark.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/changeMarkHover.png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMood">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>80</y>
+      <width>261</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>在这里显示心情~~</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="widgetBottom" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>160</y>
+     <width>421</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QWidget" name="widgetPersonalInfor" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>381</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#widgetPersonalInfor
+{
+	border-image: url(:/personalBaseInforWidget.png);
+}</string>
+    </property>
+    <widget class="QLabel" name="labelSex">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>30</y>
+       <width>58</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>      性别:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelAge">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>70</y>
+       <width>58</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>      年龄:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelConstellation">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>110</y>
+       <width>58</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>      星座:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelCity">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>150</y>
+       <width>58</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>       城市:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelYear">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>70</y>
+       <width>58</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>       生肖:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelBloodType">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>110</y>
+       <width>58</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>       血型:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelProvince">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>150</y>
+       <width>58</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>      省份:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelSex_2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>30</y>
+       <width>51</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>男</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelAge_2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>70</y>
+       <width>58</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>100</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelConstellation_2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>110</y>
+       <width>58</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>金牛座</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelCity_2">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>150</y>
+       <width>58</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>- -</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelYear_2">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>70</y>
+       <width>58</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>- -</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelBloodType_2">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>110</y>
+       <width>58</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>不知道</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelProvince_2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>150</y>
+       <width>58</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>- -</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelPhone">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>30</y>
+       <width>58</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>       手机:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelPhone_2">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>30</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>15978049913</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelMail">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>190</y>
+       <width>58</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>电子邮件:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelMail_2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>190</y>
+       <width>231</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>slug404@foxmail.com</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButtonBaseInfor">
+    <property name="geometry">
+     <rect>
+      <x>135</x>
+      <y>27</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	border-image: url(:/leftButton.png);
+}
+QPushButton:pressed
+{
+	border-image: url(:/leftButtonDown.png);
+}</string>
+    </property>
+    <property name="text">
+     <string>基本资料</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonDetailInfor">
+    <property name="geometry">
+     <rect>
+      <x>205</x>
+      <y>27</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	border-image: url(:/rightButton.png);
+}
+QPushButton:pressed
+{
+	border-image: url(:/rightButtonDowd.png);
+}</string>
+    </property>
+    <property name="text">
+     <string>修改资料</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonOk">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>270</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	border-image: url(:/PushButton.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/PushButtonHover.png);
+}
+QPushButton:pressed
+{
+	border-image: url(:/PushButtonPressed.png);
+}</string>
+    </property>
+    <property name="text">
+     <string>好</string>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonUpdate">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>270</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	border-image: url(:/PushButton.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/PushButtonHover.png);
+}
+QPushButton:pressed
+{
+	border-image: url(:/PushButtonPressed.png);
+}</string>
+    </property>
+    <property name="text">
+     <string>更   新</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widgetPersonalInfor_allowEdit" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>381</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#widgetPersonalInfor
+{
+	border-image: url(:/personalBaseInforWidget.png);
+}</string>
+    </property>
+    <widget class="ImageLabel" name="lblHeadImage">
+     <property name="geometry">
+      <rect>
+       <x>247</x>
+       <y>31</y>
+       <width>124</width>
+       <height>124</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:1px</string>
+     </property>
+     <property name="text">
+      <string>头像</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblSex">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>58</y>
+       <width>24</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>性别</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cmbBoxSex">
+     <property name="geometry">
+      <rect>
+       <x>41</x>
+       <y>57</y>
+       <width>38</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>男</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>女</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="lblNickname">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>32</y>
+       <width>24</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>昵称</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="dtEditBirthday">
+     <property name="geometry">
+      <rect>
+       <x>41</x>
+       <y>83</y>
+       <width>96</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblMail">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>110</y>
+       <width>24</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>邮箱</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblBirthday">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>84</y>
+       <width>24</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>生日</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lnEditNickname">
+     <property name="geometry">
+      <rect>
+       <x>41</x>
+       <y>31</y>
+       <width>133</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lnEditMood">
+     <property name="geometry">
+      <rect>
+       <x>41</x>
+       <y>135</y>
+       <width>133</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lnEditMail">
+     <property name="geometry">
+      <rect>
+       <x>41</x>
+       <y>109</y>
+       <width>133</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblMood">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>136</y>
+       <width>24</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>心情</string>
+     </property>
+    </widget>
+   </widget>
+   <zorder>pushButtonOk</zorder>
+   <zorder>pushButtonUpdate</zorder>
+   <zorder>widgetPersonalInfor_allowEdit</zorder>
+   <zorder>widgetPersonalInfor</zorder>
+   <zorder>pushButtonBaseInfor</zorder>
+   <zorder>pushButtonDetailInfor</zorder>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ImageLabel</class>
+   <extends>QLabel</extends>
+   <header>ImageLabel.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>pushButton</tabstop>
+  <tabstop>pushButtonBaseInfor</tabstop>
+  <tabstop>pushButtonDetailInfor</tabstop>
+  <tabstop>pushButtonUpdate</tabstop>
+  <tabstop>pushButtonOk</tabstop>
+  <tabstop>pushButtonMaxSize</tabstop>
+  <tabstop>pushButtonMinSize</tabstop>
+  <tabstop>pushButtonClose</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

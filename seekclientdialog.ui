@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SeekClientDialog</class>
+ <widget class="QDialog" name="SeekClientDialog">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>331</width>
+    <height>481</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SeekClientDialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog
+{
+background-color: rgb(255, 255, 255);
+	
+}
+
+
+
+</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>0</y>
+     <width>341</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>340</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>3400</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+
+background-color: rgb(255, 255, 255);
+
+
+
+
+
+</string>
+   </property>
+   <property name="tabShape">
+    <enum>QTabWidget::Rounded</enum>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <property name="elideMode">
+    <enum>Qt::ElideLeft</enum>
+   </property>
+   <property name="usesScrollButtons">
+    <bool>false</bool>
+   </property>
+   <property name="documentMode">
+    <bool>false</bool>
+   </property>
+   <property name="tabsClosable">
+    <bool>false</bool>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <widget class="QWidget" name="tab_seekFriend">
+    <attribute name="title">
+     <string>查找好友</string>
+    </attribute>
+    <widget class="QWidget" name="widget_seekFriendTop" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>331</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+background-color: rgba(105, 215, 2, 229);	
+border-color: rgb(105, 215, 2);
+font-size:17px;
+color: rgb(255, 255, 255);
+font-weight:600;
+}</string>
+     </property>
+     <widget class="QLabel" name="label_SeekFriend">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>用户名或：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_seekUserNotExist">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(105, 215, 2);</string>
+      </property>
+      <property name="text">
+       <string>您查找的帐号不存在</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_seekFriend">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>291</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_seekfriend">
+      <property name="geometry">
+       <rect>
+        <x>151</x>
+        <y>111</y>
+        <width>80</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>查找</string>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_seekFriendCancel">
+      <property name="geometry">
+       <rect>
+        <x>237</x>
+        <y>111</y>
+        <width>80</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>取消</string>
+      </property>
+     </widget>
+     <zorder>label_SeekFriend</zorder>
+     <zorder>label_seekUserNotExist</zorder>
+     <zorder>lineEdit_seekFriend</zorder>
+     <zorder>pushButton_seekfriend</zorder>
+     <zorder>pushButton_seekFriendCancel</zorder>
+     <zorder>groupBox_seekFriendMiddle</zorder>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_seekFriendMiddle">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>331</width>
+       <height>311</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit
+{
+	border:none;
+}
+QTextEdit
+{
+	border:none;
+}
+QPushButton
+{
+background-color: rgba(105, 215, 2, 229);	
+border-color: rgb(105, 215, 2);
+font-size:17px;
+color: rgb(255, 255, 255);
+font-weight:600;
+}</string>
+     </property>
+     <property name="title">
+      <string> 查询结果：</string>
+     </property>
+     <widget class="QLabel" name="label_seekFriendImage">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>71</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.475556 rgba(215, 188, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
+      </property>
+      <property name="text">
+       <string>头像</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_userFriendName">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>30</y>
+        <width>141</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>用户名</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_userFriendNickname">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>60</y>
+        <width>141</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>昵称</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_seekFriendSex">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>51</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>性  别:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_seekFriendBirthday">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>130</y>
+        <width>51</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>生  日:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_seekFriendEMail">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>61</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>E_mail:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_seekFriendMood">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>190</y>
+        <width>51</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>心  情:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_seekShowFriendSex">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>100</y>
+        <width>31</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>男</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_seekShowFriendBirthday">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>130</y>
+        <width>151</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>99</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_seekShowFriendEmail">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>160</y>
+        <width>191</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>979420872@qqcom</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_seekShowFriendMood">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>190</y>
+        <width>231</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextEdit
+{
+border-color: rgba(170, 165, 123, 200);
+}</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'微软雅黑'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;心情&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_seekFriendAdd">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>261</y>
+        <width>83</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>加为好友</string>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_seekFriendForward">
+      <property name="geometry">
+       <rect>
+        <x>123</x>
+        <y>261</y>
+        <width>80</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>上一步</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_seekFriendAddCancel">
+      <property name="geometry">
+       <rect>
+        <x>232</x>
+        <y>261</y>
+        <width>80</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>取消</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_seekGroup">
+    <attribute name="title">
+     <string>查找群</string>
+    </attribute>
+    <widget class="QWidget" name="widget_seekGroupTop" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>291</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+background-color: rgba(105, 215, 2, 229);	
+border-color: rgb(105, 215, 2);
+font-size:17px;
+color: rgb(255, 255, 255);
+font-weight:600;
+}</string>
+     </property>
+     <widget class="QLabel" name="label_SeekGroupId">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string> 群号：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_seekGroupNotExist">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(105, 215, 2);</string>
+      </property>
+      <property name="text">
+       <string>您查找的群不存在</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_seekGroupId">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>311</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_seekGroupOK">
+      <property name="geometry">
+       <rect>
+        <x>151</x>
+        <y>111</y>
+        <width>80</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>查找</string>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_seekGroupCancel">
+      <property name="geometry">
+       <rect>
+        <x>239</x>
+        <y>111</y>
+        <width>80</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>取消</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_seekFriendMiddle_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>331</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+background-color: rgba(105, 215, 2, 229);	
+border-color: rgb(105, 215, 2);
+font-size:17px;
+color: rgb(255, 255, 255);
+font-weight:600;
+}
+QLineEdit
+{
+	border:none;
+}
+QTextEdit
+{
+	border:none;
+}</string>
+     </property>
+     <property name="title">
+      <string> 查询结果：</string>
+     </property>
+     <widget class="QLabel" name="label_seekFriendImage_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>71</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.475556 rgba(215, 188, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
+      </property>
+      <property name="text">
+       <string>头像</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_seekGroupName">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>30</y>
+        <width>151</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>群号</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_seekGroupNickname">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>60</y>
+        <width>151</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>群名</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_seekFriendSex_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>51</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>级  别:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_seekFriendBirthday_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>130</y>
+        <width>71</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>创建时间:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_seekFriendEMail_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>61</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>E_mail:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_seekFriendMood_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>190</y>
+        <width>51</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>签  名:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_seekShowFriendSex_2">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>100</y>
+        <width>41</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>男</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_seekShowFriendBirthday_2">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>130</y>
+        <width>161</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>99</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_seekShowFriendEmail_2">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>160</y>
+        <width>181</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>979420872@qqcom</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_seekShowGroupMood">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>190</y>
+        <width>221</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'微软雅黑'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;签名&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_seekFriendAdd_2">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>253</y>
+        <width>83</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>加为好友</string>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_seekFriendForward_2">
+      <property name="geometry">
+       <rect>
+        <x>124</x>
+        <y>253</y>
+        <width>80</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>上一步</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_seekFriendAddCancel_2">
+      <property name="geometry">
+       <rect>
+        <x>234</x>
+        <y>253</y>
+        <width>80</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>取消</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>lineEdit_seekFriend</tabstop>
+  <tabstop>pushButton_seekfriend</tabstop>
+  <tabstop>pushButton_seekFriendCancel</tabstop>
+  <tabstop>pushButton_seekFriendAdd</tabstop>
+  <tabstop>pushButton_seekFriendForward</tabstop>
+  <tabstop>pushButton_seekFriendAddCancel</tabstop>
+  <tabstop>pushButton_seekGroupCancel</tabstop>
+  <tabstop>lineEdit_userFriendName</tabstop>
+  <tabstop>lineEdit_userFriendNickname</tabstop>
+  <tabstop>textEdit_seekShowFriendMood</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>lineEdit_seekGroupId</tabstop>
+  <tabstop>pushButton_seekGroupOK</tabstop>
+  <tabstop>lineEdit_seekGroupName</tabstop>
+  <tabstop>lineEdit_seekGroupNickname</tabstop>
+  <tabstop>textEdit_seekShowGroupMood</tabstop>
+  <tabstop>pushButton_seekFriendAdd_2</tabstop>
+  <tabstop>pushButton_seekFriendForward_2</tabstop>
+  <tabstop>pushButton_seekFriendAddCancel_2</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_seekFriendCancel</sender>
+   <signal>clicked()</signal>
+   <receiver>SeekClientDialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>353</x>
+     <y>154</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_seekFriendAddCancel</sender>
+   <signal>clicked()</signal>
+   <receiver>SeekClientDialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>296</x>
+     <y>437</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>366</x>
+     <y>432</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_seekGroupCancel</sender>
+   <signal>clicked()</signal>
+   <receiver>SeekClientDialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>305</x>
+     <y>150</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>392</x>
+     <y>184</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_seekFriendAddCancel_2</sender>
+   <signal>clicked()</signal>
+   <receiver>SeekClientDialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>285</x>
+     <y>438</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>387</x>
+     <y>461</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

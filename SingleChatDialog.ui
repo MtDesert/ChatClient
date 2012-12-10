@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SingleChatDialog</class>
+ <widget class="QDialog" name="SingleChatDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>411</width>
+    <height>511</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SingleChatDialog</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>411</width>
+     <height>511</height>
+    </rect>
+   </property>
+   <widget class="QWidget" name="widgetTop" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>411</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#widgetTop
+{
+	border-image: url(:/ChatDialogTitleBar.png);
+	border:none;
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+    </property>
+    <widget class="QWidget" name="widgetTitelBar" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>411</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <widget class="QPushButton" name="pushButtonMinSize">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>5</y>
+        <width>20</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>最小化</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	border-image: url(:/min.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/minHover.png);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonMaxSize">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>5</y>
+        <width>20</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>最大化</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	border-image: url(:/max.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/maxhover.png);
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonClose">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>5</y>
+        <width>20</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>关闭</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	border-image: url(:close.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/closeHover.png);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="PersonInfoImageLabel" name="labelHeadImage">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>18</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonVideo">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>39</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>发起视频会话</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/video.png);
+}
+QPushButton:Hover
+{
+	border-image: url(:/videoHover.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonAudio">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>39</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>发起语音会话</string>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/sound2.png);
+}
+QPushButton:Hover
+{
+	border-image: url(:/soundHover2.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonFile">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>39</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>传输文件</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/sendFile.png);
+}
+QPushButton:Hover
+{
+	border-image: url(:/sendFileHover.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonGroup">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>39</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>添加到临时聊天组</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/group2.png);
+}
+QPushButton:Hover
+{
+	border-image: url(:/groupHover2.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonExtra">
+     <property name="geometry">
+      <rect>
+       <x>372</x>
+       <y>50</y>
+       <width>31</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+}
+QPushButton:Hover
+{
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonMail">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>39</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>编写电子邮件</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/mail.PNG);
+}
+QPushButton:Hover
+{
+	border-image: url(:/mailHover.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widgetMiddle" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>320</y>
+      <width>411</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#widgetMiddle
+{
+background-color: qlineargradient(spread:pad, x1:0.498, y1:1, x2:0.498, y2:0, stop:0 rgba(160, 160, 160, 255), stop:1 rgba(204, 204, 204, 255));
+}</string>
+    </property>
+    <widget class="QPushButton" name="pushButtonFont">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>31</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>设置输入文本字体</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/font.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/fontHover.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonExpression">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>0</y>
+       <width>31</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>发送表情</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/express.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/expressHover.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonColor">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>0</y>
+       <width>31</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>设置输入文本颜色</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/color.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/colorHover.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonPicture">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>0</y>
+       <width>31</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>发送图片</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/picture.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/pictureHover.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonIntercept">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>0</y>
+       <width>31</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>屏幕截图</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/cut.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/cutHover.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="shortcut">
+      <string>Ctrl+I</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonRecord">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>0</y>
+       <width>31</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>聊天记录</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/record.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/recordHover.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonSendMessage">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>0</y>
+       <width>61</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/images/PushButton.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/images/PushButtonHover.png);
+}
+QPushButton:pressed
+{
+	border-image: url(:/images/PushButtonPressed.png);
+}</string>
+     </property>
+     <property name="text">
+      <string>发送信息</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonAbsorb">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>0</y>
+       <width>31</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/absorb.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/absorbHover.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widgetRecord" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>80</y>
+      <width>411</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#widgetRecord
+{
+	background-color: rgb(255, 255, 255);
+}</string>
+    </property>
+    <widget class="MyTextEdit" name="textEditRecord">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>411</width>
+       <height>241</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widgetAbsorb" native="true">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>180</y>
+       <width>171</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="labelAbsorbColor">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelAbsorbColorRGB">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>9</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>RGB值:255,255,255</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelAbsorbColorWeb">
+      <property name="geometry">
+       <rect>
+        <x>58</x>
+        <y>30</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Web值:#FFFFFF</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widgetChat" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>350</y>
+      <width>411</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <widget class="MyTextEdit" name="textEditChat">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>411</width>
+       <height>181</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Alt+s快捷键组合可以发送当前信息</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>PersonInfoImageLabel</class>
+   <extends>QLabel</extends>
+   <header>PersonInfoImageLabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MyTextEdit</class>
+   <extends>QTextEdit</extends>
+   <header>MyTextEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

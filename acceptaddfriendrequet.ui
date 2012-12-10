@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AcceptAddFriendRequet</class>
+ <widget class="QDialog" name="AcceptAddFriendRequet">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>364</width>
+    <height>303</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>364</width>
+    <height>303</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>364</width>
+    <height>303</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>AcceptAddFriendRequet</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="widget_acceptaddFriendTop" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>411</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="label_AcceptAddFriendTitle">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>1</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 16pt &quot;微软雅黑&quot;;
+font-weight:400;</string>
+    </property>
+    <property name="text">
+     <string>消息——请求添加好友</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_AcceptAddFriendCloseWindow">
+    <property name="geometry">
+     <rect>
+      <x>333</x>
+      <y>1</y>
+      <width>31</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>31</width>
+      <height>33</height>
+     </size>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>31</width>
+      <height>33</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	color: rgba(105, 215, 2, 229);
+	
+font-size:22px;
+font-weight:400;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_AcceptAddFriendMixMin">
+    <property name="geometry">
+     <rect>
+      <x>302</x>
+      <y>1</y>
+      <width>31</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>31</width>
+      <height>33</height>
+     </size>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>31</width>
+      <height>33</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	color: rgba(105, 215, 2, 229);
+	
+font-size:22px;
+font-weight:400;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>一</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label_AcceptAddFriendUserId">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>120</y>
+     <width>61</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>用户ID:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_AcceptAddFriendUserName">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>160</y>
+     <width>61</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>用户名:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_AcceptAddFriendNickname">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>200</y>
+     <width>61</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>昵    称:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_AcceptAddFriendSmallTitle">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>50</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	color: rgba(105, 215, 2, 229);
+}</string>
+   </property>
+   <property name="text">
+    <string>此用户添加你作为好友：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_AcceptAddFriendShowUserId">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>120</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_AcceptAddFriendShowUserName">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>160</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_AcceptAddFriendShowNickname">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>200</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_AcceptAddFriendAgree">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>260</y>
+     <width>99</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+	background-color: rgba(105, 215, 2, 229);
+	color: rgb(255, 255, 255);
+	font: 17px &quot;微软雅黑&quot;;
+	font-weight:600;
+}</string>
+   </property>
+   <property name="text">
+    <string>同意</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_AcceptAddFriendRefuse">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>260</y>
+     <width>99</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+	background-color: rgba(105, 215, 2, 229);
+	color: rgb(255, 255, 255);
+	font: 17px &quot;微软雅黑&quot;;
+	font-weight:600;
+}</string>
+   </property>
+   <property name="text">
+    <string>拒绝</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_accceptAddFriendRequestShowTime">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>70</y>
+     <width>251</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>61</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>时  间：</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

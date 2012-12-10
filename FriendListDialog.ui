@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FriendListDialog</class>
+ <widget class="QDialog" name="FriendListDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>231</width>
+    <height>677</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>231</width>
+     <height>681</height>
+    </rect>
+   </property>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>137</y>
+      <width>231</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tabFriend">
+     <attribute name="title">
+      <string>好友</string>
+     </attribute>
+     <widget class="MyListWidget" name="listWidget">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>0</y>
+        <width>241</width>
+        <height>483</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QSlider" name="horizontalSliderIconSize">
+      <property name="geometry">
+       <rect>
+        <x>59</x>
+        <y>460</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBoxIconSize">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>460</y>
+        <width>59</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tabGroup">
+     <attribute name="title">
+      <string>群组</string>
+     </attribute>
+     <widget class="QListWidget" name="groupListWidget">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>0</y>
+        <width>241</width>
+        <height>501</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tabately">
+     <attribute name="title">
+      <string>最近联系</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tabPersonal">
+     <attribute name="title">
+      <string>个人面板</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_bottom" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>647</y>
+      <width>231</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#widget_bottom
+{
+	border-image: url(:/bottom.png);
+}
+
+QPushButton
+{
+background-color: rgba(0,0,0,0);
+border:none;
+}
+</string>
+    </property>
+    <widget class="QPushButton" name="pushButtonSystem">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/MainSet.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/MainSetHover.png);
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonFindOther">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>0</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/find.PNG);
+}
+QPushButton:hover
+{
+	border-image: url(:/findHover.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonMessageManage">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>0</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/sound.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/soundHover.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonCreatorGroup">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>0</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	border-image: url(:/group.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/groupHover.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_top" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>231</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#widget_top
+{
+	border-image: url(:/titleBar_FriendList.png);
+	border:none;
+	background-color:transparent;
+}
+QPushButton
+{
+	border:none;
+ 	background-color:transparent;
+	color: rgb(255, 255, 255);
+}
+</string>
+    </property>
+    <widget class="QWidget" name="widgetTitle" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <widget class="QPushButton" name="pushButtonMinSize">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>5</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	border-image: url(:/min.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/minHover.png);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonClose">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>5</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	border-image: url(:/close.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/closeHover.png);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelTitle">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Chat_2011</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>5</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	border-image: url(:/max.png);
+}
+QPushButton:hover
+{
+	border-image: url(:/maxhover.png);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="pushButtonState">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>~</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelNickName">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>40</y>
+       <width>121</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 11pt &quot;微软雅黑&quot;;</string>
+     </property>
+     <property name="text">
+      <string>我神经搭错线</string>
+     </property>
+    </widget>
+    <widget class="CompleteLineEdit" name="completeLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>108</y>
+       <width>221</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit
+{
+	border-image: url(:/Search.png);
+}
+
+QLineEdit:hover
+{
+	border-image: url(:/searchHover.png);
+}
+</string>
+     </property>
+    </widget>
+    <widget class="PersonInfoImageLabel" name="imageLabel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>39</y>
+       <width>51</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/header.jpg);</string>
+     </property>
+    </widget>
+    <widget class="MoodLineEdit" name="moodLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>70</y>
+       <width>151</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>PushButton</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PersonInfoImageLabel</class>
+   <extends>QLabel</extends>
+   <header>PersonInfoImageLabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CompleteLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>CompleteLineEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MyListWidget</class>
+   <extends>QListWidget</extends>
+   <header>MyListWidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MoodLineEdit</class>
+   <extends>QPushButton</extends>
+   <header>MoodLineEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>completeLineEdit</tabstop>
+  <tabstop>listWidget</tabstop>
+  <tabstop>pushButtonFindOther</tabstop>
+  <tabstop>pushButtonMessageManage</tabstop>
+  <tabstop>pushButtonCreatorGroup</tabstop>
+  <tabstop>pushButtonState</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>moodLineEdit</tabstop>
+  <tabstop>pushButtonMinSize</tabstop>
+  <tabstop>pushButtonClose</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>pushButtonSystem</tabstop>
+  <tabstop>horizontalSliderIconSize</tabstop>
+  <tabstop>spinBoxIconSize</tabstop>
+  <tabstop>groupListWidget</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
